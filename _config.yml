@@ -1,0 +1,37 @@
+# Sitio de informes legislativos (GitHub Pages + Jekyll)
+title: "Leyes sancionadas: informes legislativos"
+description: "Trámite, votaciones nominales, debate y efectos de las leyes sancionadas por el Congreso de la Nación Argentina."
+lang: es-AR
+timezone: America/Argentina/Buenos_Aires
+# Si el sitio se publica como https://<usuario>.github.io/chevaliek/, baseurl es "/chevaliek".
+# Con dominio propio, dejar baseurl vacío y completar url.
+url: ""
+baseurl: "/chevaliek"
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 2..3
+
+permalink: /:categories/:title/
+show_excerpts: true
+minima:
+  date_format: "%d/%m/%Y"
+
+header_pages:
+  - leyes/index.md
+  - metodologia.md
+
+exclude:
+  - FORMATO_INFORMES.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
